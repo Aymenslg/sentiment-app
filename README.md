@@ -38,9 +38,10 @@ sentiment-app/
 └── docs/cadrage/    # fiches de cadrage du TP1
 ```
 
-## Membres du binôme
+
+## Membre
 
 | Rôle | Nom | Identifiant GitHub | Travail de la semaine 1 |
 | --- | --- | --- | --- |
-| Membre A | [Nom 1] | [@login] | |
-| Membre B | [Nom 2] | [@login] | |
+| Membre A | Sellag Aymen | [@Aymenslg] | Création du dépôt, setup de l'environnement, fiches de cadrage |
+| Membre B | (Travail individuel) | | |
