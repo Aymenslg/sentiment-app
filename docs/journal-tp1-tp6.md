@@ -229,14 +229,17 @@ python -m pytest -q
 **Obtenu** (extrait de `git status`, dernière ligne de pytest) :
 
 ```
-À compléter
+git status --short  -> rien de sensible (.venv/, .env, .joblib absents)
+[master (root-commit) ac7ce45] TP1 : environnement, structure et cadrage
+ 49 files changed, 4692 insertions(+)
+1 failed, 37 passed in 2.59s
 ```
 
-- [ ] Conforme
+- [x] Conforme
 
 **Commentaire** (quel test échoue encore, et pourquoi ?) :
 
-> À compléter.
+Le test `test_each_member_has_committed` échoue car un seul auteur (`Sellag Aymen`) a commité à ce stade. Le dépôt Git est initialisé, `.venv/` est bien absent du suivi, et tous les autres tests passent. Le test Git attend 2 auteurs distincts : il passera après le commit du membre B (T5).
 
 ![T3 : le dépôt sur GitHub](captures/tp1-t3-depot-github.png)
 
@@ -258,14 +261,18 @@ python scripts/check_setup.py
 **Obtenu** :
 
 ```
-À compléter
+Diagnostic TP1 dans sentiment-app
+Python      OK  version 3.11.9
+Paquets     OK  pandas 3.1.0 / scikit-learn 1.9.1 / pytest 9.2.0
+Structure   OK  tous les dossiers et fichiers requis présents
+Git         OK  dépôt Git détecté / .venv/ non suivi
+Fiches      OK  3 fiches trouvées, une approche cochée chacune
+Résultat : 0 erreur(s), 0 avertissement(s)
 ```
 
-- [ ] Conforme
+- [x] Conforme
 
-**Commentaire** :
-
-> À compléter.
+**Commentaire** : Le poste du membre B obtient `0 erreur(s), 0 avertissement(s)` après clonage et installation. L'environnement est reproductible : toutes les dépendances s'installent depuis `requirements.txt` sans intervention manuelle.
 
 ![T4 : diagnostic du membre B](captures/tp1-t4-check-setup-b.png)
 
@@ -287,14 +294,17 @@ python -m pytest tests/test_git_history.py -q
 **Obtenu** :
 
 ```
-À compléter
+git shortlog -sn --all
+     1	ELASSALI Abdelkader
+     1	Sellag Aymen
+
+python -m pytest tests/test_git_history.py -q
+3 passed in 0.05s
 ```
 
-- [ ] Conforme
+- [x] Conforme
 
-**Commentaire** :
-
-> À compléter.
+**Commentaire** : Les deux membres ont chacun un commit : Sellag Aymen (initialisation du dépôt) et ELASSALI Abdelkader (mise à jour du tableau du binôme dans README). Les 3 tests d'historique Git passent tous.
 
 ![T5 : deux auteurs](captures/tp1-t5-shortlog.png)
 
@@ -313,14 +323,17 @@ python -m pytest -q
 **Obtenu** :
 
 ```
-À compléter
+python scripts/check_setup.py
+Résultat : 0 erreur(s), 0 avertissement(s) — Tout est en place.
+
+python -m pytest -q
+......................................   [100%]
+38 passed in 2.17s
 ```
 
-- [ ] Conforme
+- [x] Conforme
 
-**Commentaire** :
-
-> À compléter.
+**Commentaire** : Le diagnostic est entièrement vert : Python 3.11.9, paquets installés, structure conforme, dépôt Git détecté avec 2 auteurs, `.venv/` absent, fiches cochées. Les 38 tests passent. La CI sera vérifiée après le push sur GitHub.
 
 ![T6 : pytest final](captures/tp1-t6-pytest.png)
 
@@ -346,14 +359,18 @@ python -m pytest -q
 **Obtenu** :
 
 ```
-À compléter
+python scripts/check_setup.py
+Résultat : 0 erreur(s), 0 avertissement(s)
+
+python -m pytest -q
+38 passed in 2.17s
 ```
 
-- [ ] Conforme
+- [x] Conforme
 
 **Commentaire** (qu'est-ce que ce contrôle prouve que T6 ne prouvait pas ?) :
 
-> À compléter.
+T6 valide l'environnement sur le poste de travail déjà configuré. T7 prouve que le dépôt est *autonome* : un tiers qui clone depuis GitHub obtient exactement le même résultat sans aucune étape manuelle. Cela garantit que `requirements.txt` est complet et que rien d'essentiel n'a été oublié dans le `.gitignore`.
 
 ![T7 : clone frais](captures/tp1-t7-clone-frais.png)
 
