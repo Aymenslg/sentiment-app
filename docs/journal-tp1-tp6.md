@@ -70,7 +70,7 @@ Sellag Aymen
 
 **Commentaire** : Le poste du membre A dispose bien de Python 3.11.9 et de Git 2.55. Le nom configuré correspond à Sellag Aymen, conforme à l'identité déclarée dans le tableau du binôme.
 
-![Poste du membre A](captures/tp0-poste-membre-a.png)
+![Poste du membre A](https://raw.githubusercontent.com/Aymenslg/sentiment-app/main/docs/captures/tp0-poste-membre-a.png)
 
 ### Poste du membre B
 
@@ -99,7 +99,7 @@ Abdelkader Elassali
 
 **Commentaire** : Le poste du membre B dispose de Python 3.11.9 (ainsi qu'une installation 3.14 plus récente, non utilisée). Git 2.55 est présent et le nom global correspond à ELASSALI Abdelkader, conforme au tableau du binôme.
 
-![Poste du membre B](captures/tp0-poste-membre-b.png)
+![Poste du membre B](https://raw.githubusercontent.com/Aymenslg/sentiment-app/main/docs/captures/tp0-poste-membre-b.png)
 
 ---
 
@@ -142,7 +142,7 @@ TP1-ENONCE.md -a---
 
 **Commentaire** : Les sept dossiers attendus (`app`, `data`, `docs`, `models`, `scripts`, `tests`, `ui`) sont présents, ainsi que `.github` et `.gitignore`. Des dossiers supplémentaires (`exemples`, `notebooks`) font partie du kit étendu et n'affectent pas la conformité.
 
-![T0 : structure du kit](captures/tp1-t0-structure.png)
+![T0 : structure du kit](https://raw.githubusercontent.com/Aymenslg/sentiment-app/main/docs/captures/tp1-t0-structure.png)
 
 ### T1 · L'environnement et le point de départ (membre A)
 
@@ -172,7 +172,7 @@ Résultat : 1 erreur(s), 3 avertissement(s) — ce dossier n'est pas un dépôt 
 
 **Commentaire** : Les trois échecs réclament la complétion des fiches de cadrage : `test_sections_are_filled` (rubriques vides), `test_exactly_one_approach_checked` (aucune approche cochée) et `test_justification_cites_two_criteria` (aucun critère cité). Les quatre tests ignorés attendent un dépôt Git initialisé (`git init`) — ils sont marqués `skipped` car la fixture détecte l'absence de dépôt.
 
-![T1 : pytest au départ](captures/tp1-t1-pytest.png)
+![T1 : pytest au départ](https://raw.githubusercontent.com/Aymenslg/sentiment-app/main/docs/captures/tp1-t1-pytest.png)
 
 ### T2 · Les fiches de cadrage (à deux)
 
@@ -207,7 +207,7 @@ python -m pytest -q
 
 **Cas 3 — Avis négatifs (Machine learning)** : des milliers d'avis étiquetés par leurs notes étoiles sont disponibles (a : données étiquetées), et le volume quotidien élevé impose un coût par requête minimal (c : coût par requête faible).
 
-![T2 : fiches complètes](captures/tp1-t2-cadrage.png)
+![T2 : fiches complètes](https://raw.githubusercontent.com/Aymenslg/sentiment-app/main/docs/captures/tp1-t2-cadrage.png)
 
 ### T3 · Le dépôt GitHub et le premier push (membre A)
 
@@ -241,7 +241,7 @@ git status --short  -> rien de sensible (.venv/, .env, .joblib absents)
 
 Le test `test_each_member_has_committed` échoue car un seul auteur (`Sellag Aymen`) a commité à ce stade. Le dépôt Git est initialisé, `.venv/` est bien absent du suivi, et tous les autres tests passent. Le test Git attend 2 auteurs distincts : il passera après le commit du membre B (T5).
 
-![T3 : le dépôt sur GitHub](captures/tp1-t3-depot-github.png)
+![T3 : le dépôt sur GitHub](https://raw.githubusercontent.com/Aymenslg/sentiment-app/main/docs/captures/tp1-t3-depot-github.png)
 
 ### T4 · L'environnement du membre B (membre B)
 
@@ -274,7 +274,7 @@ Résultat : 0 erreur(s), 0 avertissement(s)
 
 **Commentaire** : Le poste du membre B obtient `0 erreur(s), 0 avertissement(s)` après clonage et installation. L'environnement est reproductible : toutes les dépendances s'installent depuis `requirements.txt` sans intervention manuelle.
 
-![T4 : diagnostic du membre B](captures/tp1-t4-check-setup-b.png)
+![T4 : diagnostic du membre B](https://raw.githubusercontent.com/Aymenslg/sentiment-app/main/docs/captures/tp1-t4-check-setup-b.png)
 
 ### T5 · Un commit par membre (membres B puis A)
 
@@ -306,7 +306,7 @@ python -m pytest tests/test_git_history.py -q
 
 **Commentaire** : Les deux membres ont chacun un commit : Sellag Aymen (initialisation du dépôt) et ELASSALI Abdelkader (mise à jour du tableau du binôme dans README). Les 3 tests d'historique Git passent tous.
 
-![T5 : deux auteurs](captures/tp1-t5-shortlog.png)
+![T5 : deux auteurs](https://raw.githubusercontent.com/Aymenslg/sentiment-app/main/docs/captures/tp1-t5-shortlog.png)
 
 ### T6 · La vérification finale (à deux)
 
@@ -335,9 +335,9 @@ python -m pytest -q
 
 **Commentaire** : Le diagnostic est entièrement vert : Python 3.11.9, paquets installés, structure conforme, dépôt Git détecté avec 2 auteurs, `.venv/` absent, fiches cochées. Les 38 tests passent. La CI sera vérifiée après le push sur GitHub.
 
-![T6 : pytest final](captures/tp1-t6-pytest.png)
+![T6 : pytest final](https://raw.githubusercontent.com/Aymenslg/sentiment-app/main/docs/captures/tp1-t6-pytest.png)
 
-![T6 : la CI verte](captures/tp1-t6-actions.png)
+![T6 : la CI verte](https://raw.githubusercontent.com/Aymenslg/sentiment-app/main/docs/captures/tp1-t6-actions.png)
 
 ### T7 · Le clone frais
 
@@ -372,7 +372,7 @@ python -m pytest -q
 
 T6 valide l'environnement sur le poste de travail déjà configuré. T7 prouve que le dépôt est *autonome* : un tiers qui clone depuis GitHub obtient exactement le même résultat sans aucune étape manuelle. Cela garantit que `requirements.txt` est complet et que rien d'essentiel n'a été oublié dans le `.gitignore`.
 
-![T7 : clone frais](captures/tp1-t7-clone-frais.png)
+![T7 : clone frais](https://raw.githubusercontent.com/Aymenslg/sentiment-app/main/docs/captures/tp1-t7-clone-frais.png)
 
 ---
 
